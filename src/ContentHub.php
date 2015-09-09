@@ -22,6 +22,12 @@ class ContentHub extends Client
      */
     public function __construct($apiKey, $secretKey, $origin, array $config = [])
     {
+        // "base_url" parameter changed to "base_uri" in Guzzle6, so the following line
+        // is there to make sure it does not disrupt previous configuration.
+        if (!isset($config['base_uri']) && isset($config['base_url'])) {
+            $config['base_uri'] = $config['base_url'];
+        }
+
         // Setting up the headers.
         $config['headers']['Content-Type'] = 'application/json';
         $config['headers']['X-Acquia-Plexus-Client-Id'] = $origin;
