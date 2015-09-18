@@ -21,7 +21,7 @@
     ],
     "require": {
         "php": ">=5.4.5",
-        "guzzlehttp/guzzle": "dev-master#1879fbe853b0c64d109e369c7aeff09849e62d1e",
+        "guzzlehttp/guzzle": "~6.0",
         "acquia/http-hmac-php": "dev-guzzle6",
         "symfony/serializer": "2.7.*",
         "symfony/http-foundation": "2.7.*"
